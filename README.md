@@ -44,5 +44,5 @@ To update feeds, run the following in a crontab in the host machine
 
 ```
 # refresh ttrss feeds
-*/15 * * * * /usr/bin/docker exec ttrss su www-data -c "php /var/www/html/ttrss/udpate.php --feeds --quiet"
+*/15 * * * * /usr/bin/docker exec --user www-data ttrss php ttrss/update.php --feeds 
 ```
