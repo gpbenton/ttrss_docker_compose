@@ -28,7 +28,7 @@ services:
 
     fulltextrss:
         container_name: fulltextrss
-        image: php:5.6-fpm-alpine
+        image: php:5.6-fpm
         expose:
             - "9000"
         volumes:
