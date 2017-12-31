@@ -28,7 +28,7 @@ services:
 
     fulltextrss:
         container_name: fulltextrss
-        image: php:5.6-fpm
+        build: fulltextrss
         expose:
             - "9000"
         volumes:
