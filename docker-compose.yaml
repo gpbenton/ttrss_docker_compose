@@ -13,6 +13,9 @@ services:
         restart: always
         depends_on:
             - ttrsdb
+        networks:
+            - caddy
+            - default
 
     ttrsdb:
         container_name: ttrssdb
@@ -34,6 +37,14 @@ services:
         volumes:
             - "${HOME}/public_html/fulltextrss:/var/www/html/fulltextrss"
         restart: always
+        networks:
+            - caddy
+            - default
 
 volumes:
     ttrsdb_data:
+
+networks:
+    caddy:
+        external:
+            name: caddy_default
