@@ -17,7 +17,7 @@ services:
 
     ttrsdb:
         container_name: ttrssdb
-        image: "postgres:alpine"
+        image: "postgres:11-alpine"
         volumes:
             - "ttrsdb_data:/var/lib/postgresql/data"
         environment:
